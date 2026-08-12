@@ -253,24 +253,11 @@
       <span>Rio das Ostras, RJ</span>
     </div>
 
-    <div class="depoimento-form-wrap">
+    <!-- TODO: envio de depoimento fica em espera até existir login de membro
+         (só quem é assinante deve poder publicar avaliação). Ver README.md. -->
+    <div class="depoimento-em-breve">
       <h3>Você já é membro Leripe? Conta pra gente!</h3>
-      <form id="depoimento-form" class="depoimento-form">
-        <label>Seu nome <input type="text" name="nome" required></label>
-        <label>Cidade <input type="text" name="cidade" required></label>
-        <label>Sua avaliação
-          <span class="star-picker" id="star-picker" data-value="0">
-            <span data-star="1">★</span><span data-star="2">★</span><span data-star="3">★</span><span data-star="4">★</span><span data-star="5">★</span>
-          </span>
-        </label>
-        <label>Seu depoimento <textarea name="depoimento" required></textarea></label>
-        <button type="submit" class="btn btn-primary btn-block">ENVIAR DEPOIMENTO →</button>
-      </form>
-      <div class="form-success" id="depoimento-success" hidden>
-        <span>✓</span>
-        <h4>Obrigado pelo seu depoimento!</h4>
-        <p>Recebemos sua avaliação. Após análise, ela será publicada aqui para ajudar outras famílias a cuidarem da saúde com a Leripe.</p>
-      </div>
+      <p>Em breve, direto no seu login de assinante.</p>
     </div>
   </section>
 

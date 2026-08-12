@@ -32,9 +32,11 @@ assets/      → logos, vídeo e imagens (PENDENTE — ver abaixo)
 2. **Botão "Login"** (`#login-btn` em `index.html`) aponta para
    `https://app.leripesaude.com.br/login` como placeholder — confirmar a URL real do
    app/PWA.
-3. **Formulários** (depoimento e lista de espera, quando reativada) hoje só mostram a
-   tela de sucesso no front-end — não enviam para nenhum back-end ainda. Conectar a um
-   endpoint (Supabase, Resend, etc.) quando definido.
+3. **Depoimento de membro** — removido de propósito. Publicar avaliação deve exigir
+   login de assinante (evita depoimento falso/anônimo), então fica como
+   "Em breve" até existir esse login. Ver comentário `TODO` em `index.html`.
+   **Lista de Espera** (quando reativada) ainda só mostra sucesso no front-end —
+   conectar a um endpoint (Supabase, Resend, etc.) quando for reativar de verdade.
 4. **Chat "Leripe Assist"** — a opção "Ativar pelo WhatsApp" foi removida conforme
    solicitado; os dois planos levam direto ao checkout ASAAS. A caixa de texto livre
    dá uma resposta padrão (sem IA conectada neste site institucional — o assistente

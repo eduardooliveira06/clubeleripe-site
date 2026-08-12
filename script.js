@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   wireWaitlist();
   startCountdown();
   wireModalForms();
-  wireStarPicker();
   wireChatWidget();
 });
 
@@ -103,20 +102,11 @@ function startCountdown() {
   const timer = setInterval(tick, 1000);
 }
 
-/* ---------- 4. Formulário de depoimento ---------- */
+/* ---------- 4. Formulário da Lista de Espera (quando reativada) ----------
+   Depoimento com formulário próprio foi retirado de propósito: publicar
+   avaliação deve depender de login de assinante — ver nota em index.html
+   e README.md. Se reativar, reintroduzir aqui junto com o back-end real. */
 function wireModalForms() {
-  const depoForm = document.getElementById("depoimento-form");
-  const depoSuccess = document.getElementById("depoimento-success");
-  if (depoForm) {
-    depoForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      // Front-end only por enquanto: sem endpoint de back-end conectado.
-      // Ligar aqui a um endpoint (ex.: Supabase/Resend) quando disponível.
-      depoForm.hidden = true;
-      depoSuccess.hidden = false;
-    });
-  }
-
   const waitForm = document.getElementById("waitlist-form");
   const waitSuccess = document.getElementById("waitlist-success");
   if (waitForm) {
@@ -126,20 +116,6 @@ function wireModalForms() {
       waitSuccess.hidden = false;
     });
   }
-}
-
-/* ---------- 5. Seletor de estrelas do depoimento ---------- */
-function wireStarPicker() {
-  const picker = document.getElementById("star-picker");
-  if (!picker) return;
-  const stars = picker.querySelectorAll("span");
-  stars.forEach((star) => {
-    star.addEventListener("click", () => {
-      const value = Number(star.dataset.star);
-      picker.dataset.value = value;
-      stars.forEach((s) => s.classList.toggle("active", Number(s.dataset.star) <= value));
-    });
-  });
 }
 
 /* ---------- 6. Widget do chat "Leripe Assist" ---------- */
