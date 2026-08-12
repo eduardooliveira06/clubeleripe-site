@@ -179,24 +179,6 @@ section {
 }
 .video-caption { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin: 10px 0 0; }
 
-/* Partner cards */
-.partner-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  max-width: 1120px;
-}
-.partner-card {
-  background: var(--bg-panel);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-  padding: 24px 16px;
-  text-align: center;
-}
-.partner-card .icon { font-size: 1.6rem; display: block; margin-bottom: 8px; }
-.partner-card strong { display: block; margin-bottom: 4px; }
-.partner-card span { font-size: 0.8rem; color: var(--text-muted); }
-
 /* Countdown */
 .countdown {
   text-align: center;
@@ -469,7 +451,7 @@ section {
 /* Responsive */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
-  .partner-cards, .uso-grid, .passos-grid { grid-template-columns: repeat(2, 1fr); }
+  .uso-grid, .passos-grid { grid-template-columns: repeat(2, 1fr); }
   .plans-grid, .fit-grid { grid-template-columns: 1fr; }
   .header-actions { gap: 6px; }
   .btn { padding: 11px 18px; font-size: 0.9rem; }
