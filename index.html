@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leripe Saúde — Clube de Benefícios | Rio das Ostras, RJ</title>
+<meta name="description" content="Clube de benefícios com até 80% de desconto em consultas, exames, farmácias e academias. Plano Individual R$47/mês ou Familiar R$87/mês. Sem carência. Rio das Ostras, RJ.">
+<meta property="og:title" content="Leripe Saúde — Até 80% de Desconto em Saúde">
+<meta property="og:description" content="Individual R$47/mês · Familiar R$87/mês · Sem carência · Ativação imediata · Rio das Ostras, RJ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== CONFIG =====
+  Lista de Espera adormecida: para reativar, troque WAITLIST_ENABLED para true em script.js
+  Links de checkout ASAAS e WhatsApp centralizados em script.js (CONFIG)
+======================== -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">LERIPE<span>SAÚDE</span></a>
+
+    <div class="header-actions">
+      <a href="https://app.leripesaude.com.br/login" class="btn btn-ghost" id="login-btn">🔐 Login</a>
+      <a href="#planos" class="btn btn-gold" id="assinar-agora-nav">Assinar agora</a>
+      <!-- Botão original "📝 Lista de Espera" adormecido, ver #waitlist-modal e WAITLIST_ENABLED em script.js -->
+    </div>
+  </div>
+
+  <div class="partners-strip">
+    <span class="partners-label">🏅 Instituições que apoiam e validam nosso clube:</span>
+    <div class="partners-track">
+      <span class="partner-chip">ACEC</span>
+      <span class="partner-chip">Clínica Amélia Gaspar</span>
+      <span class="partner-chip">Casa do Grão</span>
+      <span class="partner-chip">🏥 Hospital Grand Mater</span>
+      <span class="partner-chip">ACEC</span>
+      <span class="partner-chip">Clínica Amélia Gaspar</span>
+      <span class="partner-chip">Casa do Grão</span>
+      <span class="partner-chip">🏥 Hospital Grand Mater</span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">✨ Clube de Benefícios em Saúde · Rio das Ostras e Região</p>
+      <h1>A maneira mais <em>inteligente</em> de cuidar da sua saúde.</h1>
+      <p class="hero-copy">
+        Chega de surpresas e mensalidades abusivas. A Leripe é o clube que nasceu para facilitar
+        seu acesso à vida saudável — <strong>não somos plano de saúde</strong>, mas negociamos
+        descontos exclusivos que chegam a até 80% em consultas, exames, farmácias e academias. Sem carência.
+      </p>
+      <p class="hero-copy">
+        <strong>Funciona assim:</strong> você escolhe sua assinatura, faz o pagamento e já tem acesso
+        à tabela exclusiva Leripe. No próprio aplicativo, você marca sua consulta no
+        <strong>sistema fast-track</strong>, online e rápido, sem precisar aguardar um humano —
+        nosso sistema funciona 24h por dia, 7 dias por semana.
+      </p>
+
+      <a href="#planos" class="btn btn-primary btn-lg" id="cta-hero">QUERO PROMOVER MINHA SAÚDE AGORA →</a>
+      <p class="hero-trust">✓ Sem carência (use hoje) &nbsp; ✓ Cancele quando quiser &nbsp; ✓ Rio das Ostras e Região</p>
+
+      <div class="stat-row">
+        <div class="stat"><strong>80%</strong><span>Desconto máximo</span></div>
+        <div class="stat"><strong>R$47</strong><span>Individual/mês</span></div>
+        <div class="stat"><strong>2min</strong><span>Ativação digital</span></div>
+        <div class="stat"><strong>24h</strong><span>Médicos e Dentistas</span></div>
+      </div>
+    </div>
+
+    <div class="hero-video">
+      <video controls poster="assets/video-poster.jpg">
+        <source src="assets/video-leripe.mp4" type="video/mp4">
+      </video>
+      <p class="video-caption">▶ Assista em apenas 1 minuto — Como a Leripe promove sua saúde gastando pouco</p>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section class="partner-cards">
+    <div class="partner-card"><span class="icon">🏥</span><strong>Hospital Grand Mater</strong><span>Parceiro Oficial</span></div>
+    <div class="partner-card"><span class="icon">🏥</span><strong>Clínica Amélia Gaspar</strong><span>Parceiro Oficial</span></div>
+    <div class="partner-card"><span class="icon">💊</span><strong>Farmácias Parceiras</strong><span>Descontos reais</span></div>
+    <div class="partner-card"><span class="icon">🏋️</span><strong>Academias Credenciadas</strong><span>Vida ativa</span></div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="planos" id="planos">
+    <p class="eyebrow eyebrow-gold">⏳ OFERTA DE LANÇAMENTO — TRAVE SEU VALOR HOJE</p>
+    <h2>Escolha o cuidado que sua vida merece.</h2>
+    <p class="section-copy">
+      Assinaturas acessíveis sem abrir mão de uma rede de qualidade. Valor que você garantiu hoje,
+      benefício que permanece sem ajuste, enquanto sua assinatura estiver ativa.
+    </p>
+
+    <div class="countdown" aria-label="Preço promocional de lançamento expira em">
+      <span class="countdown-label">🔥 Preço promocional de lançamento expira em:</span>
+      <div class="countdown-timer" id="countdown">
+        <div><span id="cd-days">00</span><small>Dias</small></div>:
+        <div><span id="cd-hours">23</span><small>Horas</small></div>:
+        <div><span id="cd-min">59</span><small>Min</small></div>:
+        <div><span id="cd-sec">00</span><small>Seg</small></div>
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      <article class="plan-card">
+        <span class="plan-kicker">ASSINATURA</span>
+        <h3>Vitalidade<br>Individual</h3>
+        <p class="plan-price"><span>R$</span>47<small>/mês</small></p>
+        <p class="plan-desc">Para você cuidar da prevenção, exames e rotina de saúde com o menor custo do mercado.</p>
+        <ul class="plan-features">
+          <li>Até 80% de desconto em consultas e exames médicos</li>
+          <li>Pronto atendimento de emergência 24h no Hospital Grand Mater</li>
+          <li>Especialistas na Clínica Odontológica, com Dentistas 24h por dia</li>
+          <li>Rede de farmácias parceiras com descontos reais</li>
+          <li>Academias credenciadas com mensalidades especiais</li>
+          <li>Lojas de produtos naturais com desconto real</li>
+          <li>Programa LeriCoins com troca de produtos reais</li>
+          <li>Zero carência · Zero burocracia · Zero taxa de adesão</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block" data-checkout="individual">QUERO A ASSINATURA INDIVIDUAL →</a>
+      </article>
+
+      <article class="plan-card plan-featured">
+        <span class="plan-badge">⭐ O MAIS AMADO PELAS FAMÍLIAS</span>
+        <span class="plan-kicker">ASSINATURA</span>
+        <h3>Toda a sua família<br>protegida por apenas</h3>
+        <p class="plan-price"><span>R$</span>87<small>/mês</small></p>
+        <p class="plan-desc">Proteção e bem-estar para você, cônjuge e até 3 dependentes. <strong>Até 5 pessoas</strong> promovendo a saúde juntas.</p>
+        <ul class="plan-features">
+          <li>Até 80% de desconto em consultas e exames médicos</li>
+          <li>Pronto atendimento de emergência 24h no Hospital Grand Mater</li>
+          <li>Especialistas na Clínica Odontológica, com Dentistas 24h por dia</li>
+          <li>Rede de farmácias parceiras com descontos reais</li>
+          <li>Academias credenciadas com mensalidades especiais</li>
+          <li>Lojas de produtos naturais com desconto real</li>
+          <li>Programa LeriCoins com troca de produtos reais</li>
+          <li>Zero carência · Zero burocracia · Zero taxa de adesão</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block" data-checkout="familiar">QUERO A ASSINATURA FAMILIAR →</a>
+      </article>
+    </div>
+
+    <p class="corporate-line">
+      Sua empresa precisa de colaboradores mais saudáveis e produtivos?
+      <a href="https://wa.me/5522998887074?text=Quero+saber+sobre+o+plano+corporativo+Leripe">Conheça nossas soluções corporativas →</a>
+    </p>
+  </section>
+
+  <!-- ONDE USAR -->
+  <section class="onde-usar">
+    <h2>Onde você pode usar a carteirinha Leripe no dia a dia</h2>
+    <p class="section-copy"><strong>Sem autorizações prévias.</strong> Apresente sua carteirinha virtual Leripe pelo celular e o desconto é aplicado na hora. Simples assim.</p>
+    <div class="uso-grid">
+      <div class="uso-card"><span class="icon">💊</span><strong>Farmácias Parceiras</strong><p>Medicamentos e cuidados preventivos mais baratos para sua rotina diária</p></div>
+      <div class="uso-card"><span class="icon">🏋️</span><strong>Academias Credenciadas</strong><p>Mova seu corpo e promova saúde com mensalidades especiais exclusivas</p></div>
+      <div class="uso-card"><span class="icon">🌿</span><strong>Lojas de Produtos Naturais</strong><p>Suplementação, nutrição e fitoterápicos com desconto real comprovado</p></div>
+      <div class="uso-card"><span class="icon">👶</span><strong>Leripe Kids</strong><p>Cuidado preventivo e acompanhamento especializado para os pequenos</p></div>
+    </div>
+  </section>
+
+  <!-- PARA VOCÊ? -->
+  <section class="fit-check">
+    <p class="eyebrow">ESTE CLUBE É PARA VOCÊ?</p>
+    <h2>Seja honesto consigo mesmo. Esta decisão pode transformar sua vida.</h2>
+    <div class="fit-grid">
+      <div class="fit-col fit-no">
+        <h3>✕ Este clube não se encaixa se você...</h3>
+        <ul>
+          <li>Acha que cuidar da saúde só importa nas emergências</li>
+          <li>Prefere arriscar a sorte em longas filas do SUS</li>
+          <li>Não se importa em pagar fortunas por exames simples</li>
+          <li>Não valoriza ter um estilo de vida mais saudável e ativo</li>
+          <li>Procura um plano de saúde que cubra todos os custos</li>
+        </ul>
+      </div>
+      <div class="fit-col fit-yes">
+        <h3>✓ Este clube é perfeito se você...</h3>
+        <ul>
+          <li>Acredita na prevenção e num estilo de vida ativo e saudável</li>
+          <li>Quer proteger quem ama sem endividar a família</li>
+          <li>Busca médicos excelentes de forma rápida, justa e acessível</li>
+          <li>Mora em Rio das Ostras ou região e quer qualidade de vida real</li>
+          <li>Quer dignidade e qualidade no momento que mais precisa</li>
+          <li>Não quer ficar refém do SUS e quer ser atendido pelos mesmos médicos dos planos tradicionais, sem pagar caro</li>
+        </ul>
+      </div>
+    </div>
+    <a href="#planos" class="btn btn-primary btn-lg" id="cta-esse-sou-eu">ESSE SOU EU — QUERO ENTRAR →</a>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona">
+    <p class="eyebrow">COMO FUNCIONA</p>
+    <h2>Como nós transformamos a sua rotina.</h2>
+    <div class="passos-grid">
+      <div class="passo"><span class="passo-num">01</span><span class="icon">🩺</span><h3>Prevenção Especializada</h3><p>Consultas agilizadas no Hospital Grand Mater e Clínica Amélia Gaspar, agendamento direto no aplicativo, sem ligações demoradas e com desconto na hora.</p></div>
+      <div class="passo"><span class="passo-num">02</span><span class="icon">🛡️</span><h3>Proteção Integral 24h</h3><p>Tranquilidade em urgências no Hospital Grand Mater a qualquer hora, com preços negociados exclusivos dentro do seu aplicativo.</p></div>
+      <div class="passo"><span class="passo-num">03</span><span class="icon">🏃</span><h3>Vida Ativa e Nutrição</h3><p>O único clube que te dá prêmios reais para você ir à academia, se exercitar e se alimentar melhor.</p></div>
+      <div class="passo"><span class="passo-num">04</span><span class="icon">💰</span><h3>Economia Inteligente</h3><p>Pague R$47 ou R$87 por mês e, quando precisar de atendimento, tenha até 80% de desconto na tabela particular.</p></div>
+    </div>
+  </section>
+
+  <!-- LERICOINS -->
+  <section class="lericoins">
+    <p class="eyebrow eyebrow-gold">🪙 PROGRAMA DE RECOMPENSAS</p>
+    <h2>Transforme saúde em conquistas reais</h2>
+    <p class="section-copy">Complete atividades físicas diárias no nosso PWA e desbloqueie sua nova garrafa térmica em até 3 meses. <strong>Sem sorteios ou pegadinhas.</strong> Junte suas LeriCoins e troque instantaneamente.</p>
+    <div class="lericoins-widget">
+      <div class="lc-header"><span>🪙 LeriCoins</span><strong>840 pts</strong></div>
+      <div class="lc-row"><span>Passos hoje</span><span>Hidratação</span><span>Consultas agendadas</span></div>
+      <div class="lc-progress"><div class="lc-bar" style="width:40%"></div></div>
+      <div class="lc-footer"><span>🏆 Garrafa Térmica — 2.100 pts</span><span>40% concluído · ~3 meses</span></div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section class="quem-somos">
+    <p class="eyebrow">QUEM SOMOS</p>
+    <h2>Nascemos em Rio das Ostras com um propósito.</h2>
+    <p class="section-copy">
+      A Leripe Saúde não é um intermediário frio nem uma empresa distante. Somos um clube de benefícios
+      que nasceu com o propósito de <strong>democratizar o acesso à saúde e à qualidade de vida</strong>
+      para os moradores de Rio das Ostras e da Região dos Lagos.
+    </p>
+    <p class="section-copy">
+      Negociamos direto com os melhores parceiros da região — do pronto atendimento de excelência no
+      Grand Mater ao treino diário na academia — para que você possa <strong>viver melhor, gastando muito menos</strong>.
+    </p>
+    <div class="stat-row stat-row-alt">
+      <div class="stat"><strong>30+</strong><span>Anos de história dos parceiros</span></div>
+      <div class="stat"><strong>80%</strong><span>Economia máxima em saúde</span></div>
+      <div class="stat"><strong>R$0</strong><span>Taxa de adesão hoje</span></div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <p class="eyebrow">DEPOIMENTOS REAIS</p>
+    <h2>Quem já cuida da saúde com a Leripe.</h2>
+    <div class="depoimento-card">
+      <span class="stars">★★★★★</span>
+      <p>"Coloquei minha família inteira por R$87. Minha filha foi ao dentista na Amélia Gaspar e o desconto foi imediato. Sem burocracia, sem espera. A Leripe é top!"</p>
+      <strong>Roberto S.</strong>
+      <span>Rio das Ostras, RJ</span>
+    </div>
+
+    <div class="depoimento-form-wrap">
+      <h3>Você já é membro Leripe? Conta pra gente!</h3>
+      <form id="depoimento-form" class="depoimento-form">
+        <label>Seu nome <input type="text" name="nome" required></label>
+        <label>Cidade <input type="text" name="cidade" required></label>
+        <label>Sua avaliação
+          <span class="star-picker" id="star-picker" data-value="0">
+            <span data-star="1">★</span><span data-star="2">★</span><span data-star="3">★</span><span data-star="4">★</span><span data-star="5">★</span>
+          </span>
+        </label>
+        <label>Seu depoimento <textarea name="depoimento" required></textarea></label>
+        <button type="submit" class="btn btn-primary btn-block">ENVIAR DEPOIMENTO →</button>
+      </form>
+      <div class="form-success" id="depoimento-success" hidden>
+        <span>✓</span>
+        <h4>Obrigado pelo seu depoimento!</h4>
+        <p>Recebemos sua avaliação. Após análise, ela será publicada aqui para ajudar outras famílias a cuidarem da saúde com a Leripe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <p class="eyebrow eyebrow-gold">⚡ DECISÃO QUE MUDA SUA VIDA</p>
+    <h2>Não deixe o cuidado com a sua saúde para amanhã.</h2>
+    <p class="section-copy">
+      Promoção da saúde começa com uma decisão. Garanta seu valor promocional de lançamento, ative seu
+      cartão digital em minutos e comece a viver com mais tranquilidade ainda hoje.
+    </p>
+    <div class="cta-final-facts">
+      <span>Individual: R$47/mês</span>
+      <span>Familiar: R$87/mês</span>
+      <span>Adesão: R$0 esta semana</span>
+      <span>Carência: Zero</span>
+    </div>
+    <a href="#planos" class="btn btn-primary btn-lg" id="cta-final">SIM, QUERO ENTRAR PARA O CLUBE AGORA →</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-links">
+    <a href="https://wa.me/5522998887074">Ativação em minutos pelo WhatsApp</a> ·
+    <a href="tel:+5522998887074">Central: (22) 99888-7074</a> ·
+    <a href="mailto:contato@leripesaude.com.br">contato@leripesaude.com.br</a>
+  </p>
+  <p class="footer-legal">
+    A Leripe Saúde é um clube de benefícios, descontos e vantagens focados na promoção da qualidade de vida.
+    Esclarecemos que não somos um plano de saúde, não operamos seguros de saúde e não oferecemos cobertura
+    médico-hospitalar universal nos termos da ANS. Os descontos e tabelas diferenciadas são oferecidos
+    diretamente pelos estabelecimentos parceiros credenciados. Condições de lançamento válidas por tempo estritamente limitado.
+  </p>
+  <p class="footer-copy">© 2026 Leripe Saúde · Rio das Ostras - RJ · contato@leripesaude.com.br</p>
+</footer>
+
+<!-- WAITLIST MODAL — DORMENTE. Controlado por WAITLIST_ENABLED em script.js -->
+<div class="modal-overlay" id="waitlist-modal" hidden>
+  <div class="modal">
+    <button class="modal-close" id="waitlist-close">×</button>
+    <p class="eyebrow eyebrow-gold">📝 LISTA DE ESPERA</p>
+    <h3>Entre na lista de espera do lançamento Leripe Saúde</h3>
+    <p>Preencha seus dados e entraremos em contato assim que abrirmos novas vagas.</p>
+    <form id="waitlist-form">
+      <label>Nome completo <input type="text" name="nome" required></label>
+      <label>WhatsApp (com DDD) <input type="tel" name="whatsapp" required></label>
+      <button type="submit" class="btn btn-primary btn-block">ENTRAR NA LISTA DE ESPERA →</button>
+    </form>
+    <div class="form-success" id="waitlist-success" hidden>
+      <span>✓</span>
+      <h4>Recebemos sua inscrição!</h4>
+      <p>Entraremos em contato pelo WhatsApp assim que houver novas vagas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget" id="chat-widget">
+  <button class="chat-fab" id="chat-fab" aria-label="Abrir Leripe Assist">🤖</button>
+  <div class="chat-panel" id="chat-panel" hidden>
+    <div class="chat-header">
+      <span class="chat-avatar">🤖</span>
+      <div><strong>Leripe Assist</strong><span class="chat-status">● online</span></div>
+      <button class="chat-close" id="chat-close">×</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg">
+        Excelente! Com a Leripe você tem acesso a <strong>mais de 31 especialidades médicas</strong>,
+        exames, pronto atendimento 24h e uma rede credenciada em Rio das Ostras e região — tudo com
+        descontos de até 80% e sem carência. <strong>Planos:</strong>
+        <ul>
+          <li>Individual: R$47/mês</li>
+          <li>Familiar: R$87/mês (até 5 pessoas)</li>
+        </ul>
+        Sem taxa de adesão. Cancele quando quiser.
+      </div>
+      <div class="chat-actions">
+        <a href="#" class="btn btn-chat" data-checkout="individual">Assinar Individual</a>
+        <a href="#" class="btn btn-chat" data-checkout="familiar">Assinar Familiar</a>
+        <button class="btn btn-chat btn-chat-secondary" id="chat-duvidas">Tirar dúvidas</button>
+      </div>
+    </div>
+    <form class="chat-input-row" id="chat-form">
+      <input type="text" id="chat-input" placeholder="escreva sua dúvida aqui" autocomplete="off">
+      <button type="submit" aria-label="Enviar">➤</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
