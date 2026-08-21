@@ -462,3 +462,42 @@ section {
   html { scroll-behavior: auto; }
   .btn:hover { transform: none; }
 }
+
+
+/* Refinamento visual baseado na identidade do site original */
+:root {
+  --font-display: 'Montserrat', sans-serif;
+  --font-impact: 'Bebas Neue', sans-serif;
+}
+
+.site-header {
+  background: rgba(10, 36, 25, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.logo-image { display: flex; align-items: center; width: 148px; height: 42px; }
+.logo-image img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+
+.partners-strip { border-bottom: 1px solid rgba(212,175,106,.55); padding-top: 8px; padding-bottom: 8px; }
+.partners-track { align-items: center; }
+.partner-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 64px; height: 34px; padding: 3px 8px; border-radius: 7px; background: rgba(238,245,239,.96); color: var(--bg-deep); }
+.partner-chip img { max-height: 28px; max-width: 70px; width: auto; object-fit: contain; }
+.partner-chip.partner-text { background: transparent; color: var(--gold-soft); min-width: auto; padding-inline: 0; }
+
+.hero { position: relative; padding-top: 42px; }
+.hero-inner { position: relative; }
+.hero-logo { width: 112px; height: 82px; object-fit: contain; margin: 0 auto 10px; opacity: .95; }
+.hero h1 { font-family: var(--font-impact); font-size: clamp(3.4rem, 7vw, 6.3rem); line-height: .94; letter-spacing: .015em; text-transform: uppercase; max-width: 650px; }
+.hero h1 em { color: var(--green-1); font-style: normal; }
+.hero-copy { max-width: 650px; }
+.hero-copy strong { color: var(--green-1); }
+
+.btn-primary { background: linear-gradient(135deg, #2fe08a 0%, #0bb776 100%); }
+.btn-gold { box-shadow: 0 8px 20px rgba(212,175,106,.22); }
+
+@media (max-width: 760px) {
+  .logo-image { width: 122px; }
+  .partners-label { display: none; }
+  .hero-logo { margin-left: auto; margin-right: auto; }
+  .hero h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
+}
