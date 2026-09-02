@@ -818,8 +818,8 @@
 })();
 </script>
 
-<!-- WAITLIST BUTTON -->
-<a href="#waitlist" class="waitlist-fixed-btn" id="waitlistBtn">📝 Lista de Espera</a>
+<!-- WAITLIST BUTTON (dormant - hidden from UX, route/code preserved) -->
+<a href="#waitlist" class="waitlist-fixed-btn" id="waitlistBtn" style="display:none!important;visibility:hidden!important;pointer-events:none!important;" aria-hidden="true" tabindex="-1">📝 Lista de Espera</a>
 
 <!-- WAITLIST MODAL -->
 <div id="waitlistModal" class="waitlist-modal" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle">
@@ -861,15 +861,15 @@
   <div class="ticker-overflow">
     <div class="ticker-track">
       <div class="ticker-content">
-        <span class="ticker-logo-chip"><img src="assets/logo-acec.png" alt="ACEC"></span><span class="t-dot">·</span>
-        <span class="ticker-logo-chip"><img src="assets/logo-amelia-gaspar.png" alt="Clínica Amélia Gaspar"></span><span class="t-dot">·</span>
-        <span class="ticker-logo-chip"><img src="assets/logo-casa-do-grao.png" alt="Casa do Grão"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-acec.png" alt="ACEC"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-amelia-gaspar.png" alt="Clínica Amélia Gaspar"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-casa-do-grao.png" alt="Casa do Grão"></span><span class="t-dot">·</span>
         <span class="t-item">🏥 Hospital Grand Mater</span><span class="t-dot">·</span>
       </div>
       <div class="ticker-content" aria-hidden="true">
-        <span class="ticker-logo-chip"><img src="assets/logo-acec.png" alt="ACEC"></span><span class="t-dot">·</span>
-        <span class="ticker-logo-chip"><img src="assets/logo-amelia-gaspar.png" alt="Clínica Amélia Gaspar"></span><span class="t-dot">·</span>
-        <span class="ticker-logo-chip"><img src="assets/logo-casa-do-grao.png" alt="Casa do Grão"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-acec.png" alt="ACEC"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-amelia-gaspar.png" alt="Clínica Amélia Gaspar"></span><span class="t-dot">·</span>
+        <span class="ticker-logo-chip"><img src="logo-casa-do-grao.png" alt="Casa do Grão"></span><span class="t-dot">·</span>
         <span class="t-item">🏥 Hospital Grand Mater</span><span class="t-dot">·</span>
       </div>
     </div>
@@ -885,7 +885,7 @@
 
       <!-- LEFT -->
       <div style="text-align:center">
-        <img src="assets/logo-hero.png" alt="Leripe Saúde" class="hero-logo rv" style="display:block;margin:0 auto 22px">
+        <img src="logo-hero.png" alt="Leripe Saúde" class="hero-logo rv" style="display:block;margin:0 auto 22px">
         <div class="rv d1" style="margin-bottom:18px">
           <span class="badge bg-gold" style="white-space:normal;text-align:center;line-height:1.6;max-width:320px">✨ Clube de Benefícios em Saúde ·<br>Rio das Ostras e Região</span>
         </div>
@@ -908,8 +908,8 @@
           <br><br>
           <span style="font-size:13px;color:rgba(255,255,255,.5);font-style:italic">*Nossa marcação de consulta ambulatorial funciona conforme disponibilidade das agendas médicas das nossas redes parceiras, porém toda a rede está centralizada no nosso aplicativo — um único local para você agendar online.</span>
         </p>
-        <a href="https://wa.me/5522998887074?text=Quero+garantir+minha+vaga+na+Leripe"
-           class="btn btn-cta btn-full btn-xl rv d4" target="_blank" rel="noopener">
+        <a href="#planos"
+           class="btn btn-cta btn-full btn-xl rv d4">
           QUERO PROMOVER MINHA SAÚDE AGORA →
         </a>
         <div class="hero-micros rv d4">
@@ -941,7 +941,7 @@
       <div class="rv d2">
         <div class="video-box">
           <video
-            src="assets/video-leripe.mp4"
+            src="video-leripe.mp4"
             controls
             preload="metadata"
             poster=""
@@ -1117,7 +1117,7 @@
   <div class="container">
     <div style="text-align:center;margin-bottom:56px" class="rv">
       <span class="badge bg-navy" style="margin-bottom:16px">ESTE CLUBE É PARA VOCÊ?</span>
-
+      
       <p style="font-size:16px;color:var(--gray-text);margin-top:14px;max-width:440px;margin-left:auto;margin-right:auto">
         Seja honesto consigo mesmo. Esta decisão pode transformar sua vida.
       </p>
