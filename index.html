@@ -1432,9 +1432,9 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
   rvEls.forEach(el => rvObs.observe(el));
 
-  /* ---- Countdown Timer — expira em 02/08/2026 às 23:59:59 ---- */
+  /* ---- Countdown Timer — expira em 31/10/2026 às 23:59:59 (Brasília) ---- */
   (function () {
-    const TARGET = new Date('2026-08-02T23:59:59-03:00').getTime();
+    const TARGET = new Date('2026-10-31T23:59:59-03:00').getTime();
 
     const dEl = document.getElementById('cdd');
     const hEl = document.getElementById('cdh');
