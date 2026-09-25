@@ -9,9 +9,11 @@ const CONFIG = {
   // só ADORMECIDOS. Troque para true e o botão volta a aparecer no menu.
   WAITLIST_ENABLED: false,
 
-  // Checkout ASAAS — assinatura semestral B2C
-  CHECKOUT_INDIVIDUAL: "https://www.asaas.com/c/5rgo7al2kd83bb7d",
-  CHECKOUT_FAMILIAR: "https://www.asaas.com/c/nedf3acno5suojqv",
+  // Termo de aceite B2C — o usuário aceita o contrato ANTES de ir ao checkout.
+  // NÃO aponte diretamente para URLs do Asaas: o aceite em /assinar grava
+  // o registro legal em contract_acceptances e ENTÃO redireciona ao Asaas.
+  CHECKOUT_INDIVIDUAL: "https://www.leripesaude.com.br/assinar?plano=individual",
+  CHECKOUT_FAMILIAR: "https://www.leripesaude.com.br/assinar?plano=familiar",
 
   WHATSAPP_NUMBER: "5522998887074",
 
@@ -28,14 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   wireChatWidget();
 });
 
-/* ---------- 1. Links de checkout ASAAS ---------- */
+/* ---------- 1. Links de checkout — via /assinar (aceite contratual) ---------- */
 function wireCheckoutLinks() {
   document.querySelectorAll("[data-checkout]").forEach((el) => {
     const plan = el.getAttribute("data-checkout");
     if (plan === "individual") el.href = CONFIG.CHECKOUT_INDIVIDUAL;
     if (plan === "familiar") el.href = CONFIG.CHECKOUT_FAMILIAR;
-    el.target = "_blank";
-    el.rel = "noopener";
+    // Navegação no mesmo contexto: /assinar é página própria da Leripe,
+    // não um site externo — remover target="_blank".
+    el.removeAttribute("target");
+    el.removeAttribute("rel");
   });
 }
 
