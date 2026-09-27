@@ -934,7 +934,7 @@
           <br><br>
           <strong>Funciona assim:</strong> Você escolhe sua assinatura, faz o pagamento e já tem acesso à tabela exclusiva Leripe, com descontos de até 80% na rede parceira hospitalar, para serviços médicos.
           <br><br>
-          No próprio aplicativo, você marca sua consulta no <strong>sistema fast-track</strong>, de forma online e rápida*, sem precisar aguardar um humano te responder — nosso sistema funciona 24 hrs por dia, 7 dias por semana.
+          No próprio aplicativo, você marca sua consulta no <strong>sistema de Agendamento</strong>, de forma online e rápida*, sem precisar aguardar um humano te responder — nosso sistema de Agendamentos funciona 24 hrs por dia, 7 dias por semana.
           <br><br>
           E se precisar falar com ser humano? Nossa equipe também está à disposição para tirar dúvidas e auxiliar no horário comercial.
           <br><br>
@@ -964,7 +964,7 @@
             <div class="ts-num">2min</div>
             <div class="ts-lbl">Ativação digital</div>
           </div>
-          <div class="trust-stat">
+          <div class="trust-stat dormant" data-dormant="emergencia">
             <div class="ts-num">24h</div>
             <div class="ts-lbl">Médicos</div>
           </div>
@@ -1299,8 +1299,8 @@
           <strong>E para isso, temos um canal de sugestões no seu aplicativo, para você falar DIRETO NO WHATSAPP DO NOSSO DIRETOR.</strong>
         </p>
         <p>
-          Negociamos direto com os melhores parceiros da região — do pronto atendimento
-          de excelência no Grand Mater ao treino diário na academia — para que você possa
+          Negociamos direto com os melhores parceiros da região — <span class="dormant" data-dormant="emergencia">do pronto atendimento
+          de excelência no Grand Mater ao</span> treino diário na academia — para que você possa
           <strong>viver melhor, gastando muito menos</strong>.
           Estamos ao seu lado promovendo bem-estar real, todos os dias.
         </p>
@@ -1795,7 +1795,7 @@
     state.ultimoTopico = 'vendas';
     showTyping(() => {
       addMessage(
-        'Excelente! Com a Leripe você tem acesso a <strong>mais de 31 especialidades médicas</strong>, exames, pronto atendimento 24h e uma rede credenciada em Rio das Ostras e região — tudo com descontos de até 80% e sem carência.\n\n' +
+        'Excelente! Com a Leripe você tem acesso a <strong>mais de 31 especialidades médicas</strong>, exames<span class="dormant" data-dormant="emergencia">, pronto atendimento 24h</span> e uma rede credenciada em Rio das Ostras e região — tudo com descontos de até 80% e sem carência.\n\n' +
         '<strong>Planos:</strong>' +
         formatarLista([
           'Individual: R$47/mês',
@@ -1867,7 +1867,7 @@
     state.ultimoTopico = 'carencia';
     showTyping(() => {
       addMessage(
-        '<strong>Não tem carência nenhuma!</strong> Diferente dos planos tradicionais que te fazem esperar meses, na Leripe você contratou, ativou e já pode começar a agendar suas consultas e exames imediatamente no principal hospital de Rio das Ostras.',
+        '<strong>Não tem carência nenhuma!</strong> Diferente dos planos tradicionais que te fazem esperar meses, na Leripe você contratou, ativou e já pode começar a agendar suas consultas e exames no principal hospital de Rio das Ostras. Sem carência, podendo usar imediatamente se houver disponibilidade médica e de realização de exames.',
         'bot',
         botoesPadrao()
       );
